@@ -17,7 +17,14 @@ impl TaylorSwiftSong {
         println!("Duration: {}", self.duration_secs);
 
     }
+
+    fn double_length(mut self) {
+        self.duration_secs = self.duration_secs * 2;
+        println!("{:?}", self);
 }
+}
+
+
 
 fn main() {
     // Defining a Struct
@@ -60,7 +67,10 @@ fn main() {
         duration_secs: 231,
     };
 
-    song.display_song_info();
+    // song.display_song_info();
+    song.double_length();
+
+
    
 }
 
