@@ -4,6 +4,21 @@ struct Hotel {
     is_booked: bool,
 }
 
+struct TaylorSwiftSong {
+    title: String,
+    release_year: u32,
+    duration_secs: u32,
+}
+
+impl TaylorSwiftSong {
+    fn display_song_info(self) {
+        println!("Title: {}", self.title);
+        println!("Release Year: {}", self.release_year);
+        println!("Duration: {}", self.duration_secs);
+
+    }
+}
+
 fn main() {
     // Defining a Struct
     struct Coffee {
@@ -38,6 +53,15 @@ fn main() {
     // Transfer of ownership to a variable 
     let hotel_room = book_hotel(String::from("Rickie"), 24.99, false);
     println!("I booked a space at {} hotels for about ${}. It was {} thst is was already booked", hotel_room.name, hotel_room.price, hotel_room.is_booked);
+
+    let song = TaylorSwiftSong {
+        title: String::from("Blank Space"),
+        release_year: 2014,
+        duration_secs: 231,
+    };
+
+    song.display_song_info();
+   
 }
 
 // Creating Structs in a Function
